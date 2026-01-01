@@ -1,0 +1,953 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cl-pr: #002B1A;
+    --cl-se: #6E6E6E;
+    --cl-rd: #c1f7b3;
+    --cl-four: #dbfbee;
+}
+
+body,
+html {
+    font-family: "Quicksand", Sans-serif;
+    font-weight: 400;
+    color: var(--cl-pr);
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+input,
+textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    border: 1px solid #666;
+}
+
+img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cl-pr);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a86b4a;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.bg-pr {
+    background-color: var(--cl-pr) !important;
+}
+
+.bg-se {
+    background-color: var(--cl-se) !important;
+}
+
+.cl-pr {
+    color: var(--cl-pr);
+}
+
+.cl-se {
+    color: var(--cl-se);
+}
+
+.cl-rd {
+    color: var(--cl-rd);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-stretch {
+    align-items: stretch;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-6 {
+    gap: 6px;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.gap-40 {
+    gap: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.font-noto {
+    font-family: "Noto Serif Display", Sans-serif;
+}
+
+.font-windsong {
+    font-family: "WindSong", Sans-serif;
+}
+
+.font-quicksand {
+    font-family: "Quicksand", Sans-serif;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-31 {
+    font-size: 31px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+.fs-57 {
+    font-size: 57px;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.lh-1-5 {
+    line-height: 1.5;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.btn.btn--map {
+    background-color: #FFFFFF25;
+    font-weight: 500;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    font-size: 15px;
+}
+
+.wrap-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+/* Start :: Main Header */
+.intro {
+    position: relative;
+    z-index: 100;
+}
+
+.main-header__content {
+    padding: 20px 28px;
+    background-color: #0000003C;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    margin: 20px 16px;
+}
+
+.heading-title.heading-title--sm {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.heading-title.heading-title--pr {
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.main-header__content .time {
+    margin-top: 20px;
+}
+
+.main-header__content .line {
+    height: 1px;
+    background-color: #FFFFFF;
+}
+
+.main-header__content .time .time__number {
+    font-weight: 600;
+    font-size: 57px;
+}
+
+.main-header__content .time .time__label {
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.main-header__content .btn:hover {
+    background-color: white;
+    color: var(--cl-pr);
+}
+
+/* End :: Main Header */
+
+/* Start :: About */
+.about {
+    padding: 50px 0 50px;
+    color: #ffffff;
+}
+
+.about svg {
+    height: 0;
+    width: 0;
+}
+
+.about .about__heading-title {
+    color: var(--cl-pr);
+}
+
+.about .thumbnails {
+    flex-direction: column;
+}
+
+.about .thumbnail {
+    height: 660px;
+    background-size: cover;
+    background-position: -50px -73px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.about .thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00000000 0%, #00000051 53%);
+}
+
+.about .thumbnail.thumbnail--1 {
+    background-image: url(images/_CH_1594_v3.jpg);
+}
+
+.about .thumbnail.thumbnail--2 {
+    background-image: url(images/_CH_1381_v3.jpg);
+}
+
+.about .thumbnail__content {
+    bottom: 0px;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    padding: 10px 10px 20px 10px;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+    min-height: 610px;
+}
+
+.about .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 48px);
+    height: calc(100% - 41px);
+    border: 25px solid #fff;
+    z-index: 1;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    background: transparent;
+}
+
+.about .card:nth-of-type(1)::before {
+    filter: url(#wavy2);
+}
+
+.about .card:nth-of-type(2)::before {
+    filter: url(#wavy2);
+}
+
+
+.about .card .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    transition-duration: 1s;
+}
+
+/* End :: About */
+
+/* Start :: Countdown */
+.countdown {
+    margin-bottom: 100px;
+}
+
+.countdown .countdown__heading {
+    border-radius: 50px 50px 0 0;
+    background-image: url(images/_CH_1799_v2.jpg);
+    background-position: center -160px;
+    background-size: cover;
+}
+
+.countdown .countdown__heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+    border-radius: 50px 50px 0 0;
+}
+
+.countdown .countdown__heading .heart .heartbeat {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+.countdown .countdown__heading .content {
+    padding: 20px;
+    z-index: 1;
+    color: white;
+}
+
+.countdown .countdown__heading .time-number>div {
+    line-height: 1;
+    background-color: #B2788000;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    padding: 20px 10px 25px 10px;
+
+}
+
+.countdown .wrapper-content {
+    background-color: var(--cl-pr);
+    padding: 14px;
+}
+
+.countdown .wrapper-content .title {
+    font-size: 20px;
+}
+
+.countdown .wrapper-content .content {
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.countdown .wrapper-content .content .thumbnail {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.countdown .wrapper-content .content .thumbnail {
+    background-image: url(images/_CH_1774_v2.jpg);
+    background-size: cover;
+    background-position: 0px -16px;
+    max-width: 100%;
+    width: 320px;
+    height: 340px;
+    border-radius: 100% 100% 0 0;
+}
+
+.countdown .wrapper-content .content .line {
+    width: 100px;
+    height: 1px;
+    background-color: var(--cl-pr);
+}
+
+.countdown .wrapper-content .content .label {
+    line-height: 26px;
+}
+
+.countdown .wrapper-content .content .btn {
+    transition: all 0.3s ease;
+    color: var(--cl-pr);
+    border: 1px solid var(--cl-pr);
+}
+
+.countdown .wrapper-content .content .btn:hover {
+    background-color: var(--cl-pr);
+    color: white;
+}
+
+.countdown .wrapper-content .number {
+    font-size: 32px;
+}
+
+/* End :: Countdown */
+
+/* Start :: Timeline */
+.timeline {
+    padding: 60px 0 60px;
+    color: #ffffff;
+    background-color: var(--cl-pr);
+}
+
+.timeline .thumbnail {
+    padding: 20px 30px 20px 0px;
+}
+
+.timeline img {
+    width: 108px;
+}
+
+.timeline .text {
+    padding-left: 30px;
+}
+
+.timeline .text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+}
+
+.timeline .text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-45%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+/* End :: Timeline */
+
+/* Start :: Album */
+.album {
+    padding: 60px 0 60px;
+}
+
+.album .album__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 6px;
+}
+
+.album .item {
+    border-radius: 6px;
+    min-height: 240px;
+    font-size: 32px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.album .item-1 {
+    background-color: red;
+    background-image: url(images/_CH_1371_v2.jpg);
+}
+
+.album .item-2 {
+    background-color: yellow;
+    background-image: url(images/_CH_1987_v2.jpg);
+    background-position: center -20px;
+}
+
+.album .item-3 {
+    background-color: green;
+    background-image: url(images/_CH_1442_v2.jpg);
+    background-position: center -18px;
+}
+
+.album .item-4 {
+    background-color: blue;
+    background-image: url(images/_CH_1805_v2.jpg);
+    background-position: center -10px;
+}
+
+.album .item-5 {
+    background-color: orange;
+    background-image: url(images/_CH_1799_v2.jpg);
+    background-position: center -15px;
+}
+
+.album .item-6 {
+    background-color: purple;
+    background-image: url(images/_CH_1964_v2.JPG);
+    background-position: -100px 0px;
+}
+
+.album .item-7 {
+    background-color: pink;
+    background-image: url(images/_CH_1936_v2.jpg);
+    background-position: center -20px;
+}
+
+.album .item-8 {
+    background-color: brown;
+    background-image: url(images/_CH_1528_v2.jpg);
+    background-position: center -20px;
+
+}
+
+/* End :: Album */
+
+/* Start :: Congratulations */
+.congratulations {
+    padding: 60px 0 40px;
+    background-image: url(images/_CH_1972_v2.jpg);
+    background-position: 50px center;
+    background-size: cover;
+}
+
+.congratulations .congratulations__heading {
+    color: white;
+}
+
+.congratulations .congratulations__messages {
+    font-size: 14px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.congratulations .congratulations__messages .message {
+    border-bottom: 1px solid #9b9b9b;
+    padding-bottom: 30px;
+}
+
+.congratulations .congratulations__form {
+    background-color: var(--cl-four);
+    padding: 20px;
+    margin: 30px 16px;
+    border-radius: 10px;
+}
+
+.congratulations .btn {
+    background-color: var(--cl-pr);
+    color: white;
+    padding: .75rem 1rem;
+    border-radius: 3px;
+}
+
+/* End :: Congratulations */
+
+/* Start :: Banking */
+.banking {
+    padding: 100px 0;
+}
+
+.banking .thumbnail {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.banking .thumbnail img {
+    border-radius: 20px;
+}
+
+/* End :: Banking */
+
+/* Start :: Thankyou */
+.thankyou {
+    background-image: url(images/_CH_1344_v3.jpg);
+    background-position: 0px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    min-height: 300px;
+    color: white;
+    font-size: 20px;
+}
+
+.thankyou::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.thankyou .thankyou__heading {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.thankyou .thankyou__desc {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+
+
+/* End :: Thankyou */
+
+@media screen and (min-width: 576px) {
+    .album .item-1 {
+        background-position: center;
+    }
+
+    .album .item-3 {
+        background-position: center -30px;
+    }
+
+    .album .item-7 {
+        background-position: center -40px;
+    }
+
+    .album .item-8 {
+        background-position: center -75px;
+    }
+
+    .about .thumbnail {
+        background-position: center -73px;
+    }
+
+}
+
+@media screen and (min-width: 991px) {
+    .main-header__content {
+        padding: 30px 40px;
+    }
+
+    .heading-title.heading-title--pr {
+        font-size: 60px;
+        margin-top: 10px;
+    }
+
+    .heading-title.heading-title--pr span {
+        font-size: 50px;
+    }
+
+    .heading-title.heading-title--sm {
+        font-size: 32px;
+    }
+
+    .main-header__content .time {
+        margin-top: 40px;
+    }
+
+    .about {
+        padding: 100px 0 100px;
+    }
+
+    .about .thumbnails {
+        flex-direction: row;
+    }
+
+
+    .about .thumbnails .card {
+        min-height: 550px;
+    }
+
+    .about .thumbnail {
+        height: 550px;
+        background-position: 0px -73px;
+    }
+
+    .countdown .wrapper-content .content {
+        padding: 30px;
+    }
+
+    .countdown .countdown__heading {
+        border-radius: 100px 100px 0 0;
+    }
+
+    .countdown .countdown__heading::before {
+        border-radius: 100px 100px 0 0;
+    }
+
+    .countdown .wrapper-content .number {
+        font-size: 57px;
+    }
+
+    .countdown .wrapper-content .content .line {
+        width: 130px;
+    }
+
+    .timeline {
+        padding: 120px 0 120px;
+    }
+
+    .album {
+        padding: 120px 0 120px;
+    }
+
+    .album .album__grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .album .item {
+        min-height: 340px;
+    }
+
+    .album .item-1 {
+        background-color: red;
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+
+    .album .item-2 {
+        background-color: yellow;
+        grid-column: span 1;
+        grid-row: span 2;
+        background-position: center -50px;
+    }
+
+    .album .item-3 {
+        background-color: green;
+        grid-column: span 1;
+        grid-row: span 2;
+        background-position: center -100px;
+    }
+
+    .album .item-4 {
+        background-color: blue;
+        grid-column: span 1;
+        grid-row: span 2;
+        background-position: center -30px;
+    }
+
+    .album .item-5 {
+        background-color: orange;
+        grid-column: span 1;
+        grid-row: span 1;
+        background-position: center -50px;
+    }
+
+    .album .item-6 {
+        background-color: purple;
+        grid-column: span 2;
+        grid-row: span 2;
+        background-position: -56px 0px;
+    }
+
+    .album .item-7 {
+        background-color: pink;
+        grid-column: span 1;
+        grid-row: span 1;
+        background-position: center -50px;
+    }
+
+    .album .item-8 {
+        background-color: brown;
+        grid-column: span 1;
+        grid-row: span 1;
+        background-position: center -100px;
+
+    }
+
+    .congratulations {
+        padding: 100px 0 80px;
+    }
+
+    .congratulations .congratulations__form {
+        padding: 40px;
+        margin: 30px auto;
+        width: 450px;
+    }
+
+    .thankyou {
+        background-image: url(images/_CH_1344_v3.jpg);
+        background-position: 0px -100px;
+        background-size: cover;
+        height: 80dvh;
+        min-height: 500px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .thankyou .thankyou__heading {
+        font-size: 70px;
+    }
+
+    .about .thumbnail__content {
+        bottom: 45px;
+        transform: translateY(0);
+    }
+
+    .thankyou .thankyou__desc {
+        font-size: 18px;
+    }
+
+}
